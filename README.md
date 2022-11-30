@@ -1,15 +1,12 @@
-# BolsaDeValores
+# TAD Bolsa De Valores
 Projeto da disciplina Laboratório de Estrutura de Dados
 
 Tema: Bolsa de Valores
 
-Alunos: 
-
+Aluno: 
 Arthur Salviano Ferreira
 
-Lucas Manoel Freire Monteiro Cabral
 # Instruções
-
 
 1.  Entre pelo prompt de comando;
 2.  Usando o comando "cd dir" entre na pasta onde estão os arquivos deste projeto;
