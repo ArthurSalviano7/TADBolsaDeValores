@@ -20,6 +20,8 @@ public class HeapSort extends Funcoes {
         criarArquivo(HeapSortTicker(inverterVetorPilha(vetor)), "b3stocks_ticker_heapSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_heapSort_piorCaso.csv\" criado com sucesso.");
 
+        vetor = baseDeDados.clone();
+
         System.out.println();
         System.out.println("VOLUME:");
         System.out.println();
@@ -34,6 +36,8 @@ public class HeapSort extends Funcoes {
         System.out.println("Pior Caso:");
         criarArquivo(HeapSortVolume(inverterVetorPilha(vetor)), "b3stocks_volume_heapSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_heapSort_piorCaso.csv\" criado com sucesso.");
+
+        vetor = baseDeDados.clone();
 
         System.out.println();
         System.out.println("VARIACOES DIARIAS:");

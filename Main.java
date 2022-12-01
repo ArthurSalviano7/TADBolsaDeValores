@@ -7,19 +7,18 @@ public class Main extends Funcoes {
         String caminho2 = "./b3stocks_T1.csv";
         String caminhoTeste = "./b3_stock_teste.csv";
         
-        /* 
+        
         TransformarData transformarData = new TransformarData();
         transformarData.transformacao(caminho);
-
+         
         FiltrarRegistro filtrarRegistro = new FiltrarRegistro();
         filtrarRegistro.filtrar(caminho2);
 
         FiltrarMediaDiaria filtrarPorMedia = new FiltrarMediaDiaria();
         filtrarPorMedia.filtrarMediaDiaria(caminho2);
-        */
+        
 
-        Registro[] baseDeDados = construirConjuntoDinamico(caminho2);
-        System.out.println(baseDeDados.length);
+        Registro[] baseDeDados = construirConjuntoDinamico(caminho2); //Construção do vetor a partir do conjunto dinâmico
         //Registro[] baseDeDados = construirConjuntoDinamico(caminhoTeste); //Vetor menor para testar as ordenações
 
         
@@ -29,11 +28,8 @@ public class Main extends Funcoes {
         HeapSort objHeapSort = new HeapSort();
         objHeapSort.gerarHeapSort(baseDeDados);
 
-        QuickSort objQuickSort = new QuickSort();
-        objQuickSort.gerarQuickSort(baseDeDados);
-
-        QuickSortMedianaDe3 objQuickSortMedianaDe3 = new QuickSortMedianaDe3();
-        objQuickSortMedianaDe3.gerarQuickSortMed3(baseDeDados);
+        CountingSort objCountingSort = new CountingSort();
+        objCountingSort.gerarcountingSort(baseDeDados);
 
         InsertionSort objInsertionSort = new InsertionSort();
         objInsertionSort.gerarInsertionSort(baseDeDados);
@@ -41,9 +37,11 @@ public class Main extends Funcoes {
         SelectionSort objSelectionSort = new SelectionSort();
         objSelectionSort.gerarSelectionSort(baseDeDados);
 
-        CountingSort objCountingSort = new CountingSort();
-        objCountingSort.gerarcountingSort(baseDeDados);
-        
+        QuickSort objQuickSort = new QuickSort();
+        objQuickSort.gerarQuickSort(baseDeDados);
+
+        QuickSortMedianaDe3 objQuickSortMedianaDe3 = new QuickSortMedianaDe3();
+        objQuickSortMedianaDe3.gerarQuickSortMed3(baseDeDados);
 
     }//Fim do main
 }

@@ -71,17 +71,7 @@ public abstract class Funcoes {
         return vetorRegistro;
     }//Fim do metodo ConstruirVetorRegistro
 
-    public Registro[] inverterVetor(Registro[] vetor){
-        int j = 0;
-        Registro[] A = new Registro[vetor.length];
-
-        for(int i = vetor.length - 1; i >= 0; i--){
-            A[j] = vetor[i];
-            j++;
-        }
-        return A;
-    }
-
+    /*Utilização da pilha para construir vetor invertido*/
     public static Registro[] inverterVetorPilha(Registro[] vetor) throws PilhaCheiaException, PilhaVaziaException{
         Registro[] A = new Registro[vetor.length];
 

@@ -21,6 +21,8 @@ public class MergeSort extends Funcoes{
         criarArquivo(MergeSortTickerTempo(inverterVetorPilha(vetor)), "b3stocks_ticker_mergeSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_mergeSort_piorCaso.csv\" criado com sucesso.");
 
+        vetor = baseDeDados.clone();
+
         System.out.println();
         System.out.println("VOLUME:");
         System.out.println();
@@ -35,6 +37,8 @@ public class MergeSort extends Funcoes{
         System.out.println("Pior Caso:");
         criarArquivo(MergeSortVolumeTempo(inverterVetorPilha(vetor)), "b3stocks_volume_mergeSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_mergeSort_piorCaso.csv\" criado com sucesso.");
+
+        vetor = baseDeDados.clone();
 
         System.out.println();
         System.out.println("VARIACOES DIARIAS:");

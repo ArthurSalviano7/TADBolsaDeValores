@@ -6,12 +6,13 @@ public class QuickSortMedianaDe3 extends Funcoes {
 
         System.out.println();
         System.out.println("________________________QUICK SORT COM MEDIANA DE 3________________________");
-        System.out.println();
+        System.out.println(); 
         System.out.println("ORDEM ALFABETICA:");
         System.out.println("Medio Caso:");
         criarArquivo(QuickSortMed3TickerTempo(vetor), "b3stocks_ticker_quickSortMediana3_medioCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_quickSortMediana3_medioCaso.csv\" criado com sucesso.");
 
+        
         System.out.println("Melhor Caso:");
         criarArquivo(QuickSortMed3TickerTempo(vetor), "b3stocks_ticker_quickSortMediana3_melhorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_quickSortMediana3_melhorCaso.csv\" criado com sucesso.");
@@ -20,6 +21,8 @@ public class QuickSortMedianaDe3 extends Funcoes {
         criarArquivo(QuickSortMed3TickerTempo(inverterVetorPilha(vetor)), "b3stocks_ticker_quickSortMediana3_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_quickSortMediana3_piorCaso.csv\" criado com sucesso.");
     
+        vetor = baseDeDados.clone();
+
         System.out.println();
         System.out.println("VOLUME:");
         System.out.println("Medio Caso:");
@@ -34,6 +37,8 @@ public class QuickSortMedianaDe3 extends Funcoes {
         criarArquivo(QuickSortMed3VolumeTempo(inverterVetorPilha(vetor)), "b3stocks_volume_quickSortMediana3_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_quickSortMediana3_piorCaso.csv\" criado com sucesso.");
 
+        vetor = baseDeDados.clone();
+        
         System.out.println();
         System.out.println("VARIACOES DIARIAS:");
         System.out.println("Medio Caso:");
@@ -107,7 +112,7 @@ public class QuickSortMedianaDe3 extends Funcoes {
         public Registro[] QuickSortMed3VolumeTempo(Registro[] vetor){
             long inicio = System.currentTimeMillis();
 
-            MedianaDe3Volume(vetor, 0, (vetor.length-1)/2, vetor.length-1);
+            MedianaDe3Volume(vetor, 0, (int)(vetor.length-1)/2, vetor.length-1);
 
             QuickSortVolume(vetor, 0, vetor.length-1);
             System.out.println("Ordenação realizada em " + (System.currentTimeMillis() - inicio) + " milissegundos");

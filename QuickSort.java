@@ -21,6 +21,8 @@ public class QuickSort extends Funcoes{
         criarArquivo(QuickSortTickerTempo(inverterVetorPilha(vetor)), "b3stocks_ticker_quickSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_quickSort_piorCaso.csv\" criado com sucesso.");
 
+        vetor = baseDeDados.clone();
+
         System.out.println();
         System.out.println("VOLUME:");
         System.out.println("Medio Caso:");
@@ -34,6 +36,8 @@ public class QuickSort extends Funcoes{
         System.out.println("Pior Caso:");
         criarArquivo(QuickSortVolumeTempo(inverterVetorPilha(vetor)), "b3stocks_volume_quickSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_quickSort_piorCaso.csv\" criado com sucesso.");
+
+        vetor = baseDeDados.clone();
 
         System.out.println();
         System.out.println("VARIACOES DIARIAS:");

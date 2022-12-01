@@ -19,6 +19,8 @@ public class InsertionSort extends Funcoes {
         System.out.println("Pior Caso:");
         criarArquivo(insertionSortTicker(inverterVetorPilha(vetor)), "b3stocks_ticker_insertionSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_insertionSort_piorCaso.csv\" criado com sucesso.");
+
+        vetor = baseDeDados.clone();
         
         System.out.println();
         System.out.println("VOLUME:");
@@ -34,6 +36,8 @@ public class InsertionSort extends Funcoes {
         System.out.println("Pior Caso:");
         criarArquivo(insertionSortVolume(inverterVetorPilha(vetor)), "b3stocks_volume_insertionSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_insertionSort_piorCaso.csv\" criado com sucesso.");
+
+        vetor = baseDeDados.clone();
 
         System.out.println();
         System.out.println("VARIACOES DIARIAS:");
