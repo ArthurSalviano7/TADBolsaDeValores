@@ -1,6 +1,6 @@
 public class HeapSort extends Funcoes {
 
-    public void gerarHeapSort(Registro[] baseDeDados){
+    public void gerarHeapSort(Registro[] baseDeDados) throws PilhaCheiaException, PilhaVaziaException{
 
         Registro[] vetor = baseDeDados.clone();
 
@@ -17,7 +17,7 @@ public class HeapSort extends Funcoes {
         System.out.println("Arquivo \"b3stocks_ticker_heapSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(HeapSortTicker(inverterVetor(vetor)), "b3stocks_ticker_heapSort_piorCaso.csv");
+        criarArquivo(HeapSortTicker(inverterVetorPilha(vetor)), "b3stocks_ticker_heapSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_heapSort_piorCaso.csv\" criado com sucesso.");
 
         System.out.println();
@@ -32,7 +32,7 @@ public class HeapSort extends Funcoes {
         System.out.println("Arquivo \"b3stocks_volume_heapSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(HeapSortVolume(inverterVetor(vetor)), "b3stocks_volume_heapSort_piorCaso.csv");
+        criarArquivo(HeapSortVolume(inverterVetorPilha(vetor)), "b3stocks_volume_heapSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_heapSort_piorCaso.csv\" criado com sucesso.");
 
         System.out.println();
@@ -47,7 +47,7 @@ public class HeapSort extends Funcoes {
         System.out.println("Arquivo \"b3stocks_fluctuations_heapSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(HeapSortVariacoes(inverterVetor(vetor)), "b3stocks_fluctuations_heapSort_piorCaso.csv");
+        criarArquivo(HeapSortVariacoes(inverterVetorPilha(vetor)), "b3stocks_fluctuations_heapSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_fluctuations_heapSort_piorCaso.csv\" criado com sucesso.");
     }
 

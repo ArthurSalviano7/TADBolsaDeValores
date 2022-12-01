@@ -1,7 +1,7 @@
 
 public class SelectionSort extends Funcoes{
     
-    public void gerarSelectionSort(Registro[] baseDeDados){
+    public void gerarSelectionSort(Registro[] baseDeDados) throws PilhaCheiaException, PilhaVaziaException{
 
         Registro[] vetor = baseDeDados.clone();
 
@@ -18,7 +18,7 @@ public class SelectionSort extends Funcoes{
         System.out.println("Arquivo \"b3stocks_ticker_selectionSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(selectionSortTicker(inverterVetor(vetor)), "b3stocks_ticker_selectionSort_piorCaso.csv");
+        criarArquivo(selectionSortTicker(inverterVetorPilha(vetor)), "b3stocks_ticker_selectionSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_selectionSort_piorCaso.csv\" criado com sucesso.");
 
         System.out.println();
@@ -33,7 +33,7 @@ public class SelectionSort extends Funcoes{
         System.out.println("Arquivo \"b3stocks_volume_selectionSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(selectionSortVolume(inverterVetor(vetor)), "b3stocks_volume_selectionSort_piorCaso.csv");
+        criarArquivo(selectionSortVolume(inverterVetorPilha(vetor)), "b3stocks_volume_selectionSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_selectionSort_piorCaso.csv\" criado com sucesso.");
 
         System.out.println();
@@ -48,7 +48,7 @@ public class SelectionSort extends Funcoes{
         System.out.println("Arquivo \"b3stocks_fluctuations_selectionSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(selectionSortVariacoes(inverterVetor(vetor)), "b3stocks_fluctuations_selectionSort_piorCaso.csv");
+        criarArquivo(selectionSortVariacoes(inverterVetorPilha(vetor)), "b3stocks_fluctuations_selectionSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_fluctuations_selectionSort_piorCaso.csv\" criado com sucesso.");
     }
 

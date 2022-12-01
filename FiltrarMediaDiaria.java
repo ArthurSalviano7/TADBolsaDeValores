@@ -20,7 +20,8 @@ public class FiltrarMediaDiaria extends Funcoes {
             colunas = arq.readLine(); 
             escrever.println(colunas); //Escreve a primeira linha
 
-            Registro[] vetorRegistro = construirVetorRegistro(caminho);
+            
+            Registro[] vetorRegistro = construirConjuntoDinamico(caminho);
             OrdenarPorData(vetorRegistro);
             
             float mediaDiaria = 0;

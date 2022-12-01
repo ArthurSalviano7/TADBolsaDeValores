@@ -1,6 +1,6 @@
 public class MergeSort extends Funcoes{
     
-    public void gerarMergeSort(Registro[] baseDeDados){
+    public void gerarMergeSort(Registro[] baseDeDados) throws PilhaCheiaException, PilhaVaziaException{
 
         Registro[] vetor = baseDeDados.clone();
 
@@ -18,7 +18,7 @@ public class MergeSort extends Funcoes{
         System.out.println("Arquivo \"b3stocks_ticker_mergeSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(MergeSortTickerTempo(inverterVetor(vetor)), "b3stocks_ticker_mergeSort_piorCaso.csv");
+        criarArquivo(MergeSortTickerTempo(inverterVetorPilha(vetor)), "b3stocks_ticker_mergeSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_mergeSort_piorCaso.csv\" criado com sucesso.");
 
         System.out.println();
@@ -33,7 +33,7 @@ public class MergeSort extends Funcoes{
         System.out.println("Arquivo \"b3stocks_volume_mergeSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(MergeSortVolumeTempo(inverterVetor(vetor)), "b3stocks_volume_mergeSort_piorCaso.csv");
+        criarArquivo(MergeSortVolumeTempo(inverterVetorPilha(vetor)), "b3stocks_volume_mergeSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_mergeSort_piorCaso.csv\" criado com sucesso.");
 
         System.out.println();
@@ -48,7 +48,7 @@ public class MergeSort extends Funcoes{
         System.out.println("Arquivo \"b3stocks_fluctuations_mergeSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(MergeSortVariacoesTempo(inverterVetor(vetor)), "b3stocks_fluctuations_mergeSort_piorCaso.csv");
+        criarArquivo(MergeSortVariacoesTempo(inverterVetorPilha(vetor)), "b3stocks_fluctuations_mergeSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_fluctuations_mergeSort_piorCaso.csv\" criado com sucesso.");
     }
 

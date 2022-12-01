@@ -1,7 +1,7 @@
 
 public class QuickSort extends Funcoes{
     
-    public void gerarQuickSort(Registro[] baseDeDados){
+    public void gerarQuickSort(Registro[] baseDeDados) throws PilhaCheiaException, PilhaVaziaException{
 
         Registro[] vetor = baseDeDados.clone();
 
@@ -18,7 +18,7 @@ public class QuickSort extends Funcoes{
         System.out.println("Arquivo \"b3stocks_ticker_quickSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(QuickSortTickerTempo(inverterVetor(vetor)), "b3stocks_ticker_quickSort_piorCaso.csv");
+        criarArquivo(QuickSortTickerTempo(inverterVetorPilha(vetor)), "b3stocks_ticker_quickSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_quickSort_piorCaso.csv\" criado com sucesso.");
 
         System.out.println();
@@ -32,7 +32,7 @@ public class QuickSort extends Funcoes{
         System.out.println("Arquivo \"b3stocks_volume_quickSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(QuickSortVolumeTempo(inverterVetor(vetor)), "b3stocks_volume_quickSort_piorCaso.csv");
+        criarArquivo(QuickSortVolumeTempo(inverterVetorPilha(vetor)), "b3stocks_volume_quickSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_quickSort_piorCaso.csv\" criado com sucesso.");
 
         System.out.println();
@@ -46,7 +46,7 @@ public class QuickSort extends Funcoes{
         System.out.println("Arquivo \"b3stocks_fluctuations_quickSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(QuickSortVariacoesTempo(inverterVetor(vetor)), "b3stocks_fluctuations_quickSort_piorCaso.csv");
+        criarArquivo(QuickSortVariacoesTempo(inverterVetorPilha(vetor)), "b3stocks_fluctuations_quickSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_fluctuations_quickSort_piorCaso.csv\" criado com sucesso.");
     }
         public Registro[] QuickSortTickerTempo(Registro[] vetor){

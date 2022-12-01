@@ -1,6 +1,6 @@
 public class QuickSortMedianaDe3 extends Funcoes {
 
-    public void gerarQuickSortMed3(Registro[] baseDeDados){
+    public void gerarQuickSortMed3(Registro[] baseDeDados) throws PilhaCheiaException, PilhaVaziaException{
 
         Registro[] vetor = baseDeDados.clone();
 
@@ -17,7 +17,7 @@ public class QuickSortMedianaDe3 extends Funcoes {
         System.out.println("Arquivo \"b3stocks_ticker_quickSortMediana3_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(QuickSortMed3TickerTempo(inverterVetor(vetor)), "b3stocks_ticker_quickSortMediana3_piorCaso.csv");
+        criarArquivo(QuickSortMed3TickerTempo(inverterVetorPilha(vetor)), "b3stocks_ticker_quickSortMediana3_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_quickSortMediana3_piorCaso.csv\" criado com sucesso.");
     
         System.out.println();
@@ -31,7 +31,7 @@ public class QuickSortMedianaDe3 extends Funcoes {
         System.out.println("Arquivo \"b3stocks_volume_quickSortMediana3_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(QuickSortMed3VolumeTempo(inverterVetor(vetor)), "b3stocks_volume_quickSortMediana3_piorCaso.csv");
+        criarArquivo(QuickSortMed3VolumeTempo(inverterVetorPilha(vetor)), "b3stocks_volume_quickSortMediana3_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_quickSortMediana3_piorCaso.csv\" criado com sucesso.");
 
         System.out.println();
@@ -45,7 +45,7 @@ public class QuickSortMedianaDe3 extends Funcoes {
         System.out.println("Arquivo \"b3stocks_fluctuations_quickSortMediana3_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(QuickSortMed3VariacoesTempo(inverterVetor(vetor)), "b3stocks_fluctuations_quickSortMediana3_piorCaso.csv");
+        criarArquivo(QuickSortMed3VariacoesTempo(inverterVetorPilha(vetor)), "b3stocks_fluctuations_quickSortMediana3_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_fluctuations_quickSortMediana3_piorCaso.csv\" criado com sucesso.");
     }
 

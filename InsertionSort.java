@@ -1,7 +1,7 @@
 
 public class InsertionSort extends Funcoes {
 
-    public void gerarInsertionSort(Registro[] baseDeDados){
+    public void gerarInsertionSort(Registro[] baseDeDados) throws PilhaCheiaException, PilhaVaziaException{
 
         Registro[] vetor = baseDeDados.clone();
 
@@ -17,7 +17,7 @@ public class InsertionSort extends Funcoes {
         System.out.println("Arquivo \"b3stocks_ticker_insertionSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(insertionSortTicker(inverterVetor(vetor)), "b3stocks_ticker_insertionSort_piorCaso.csv");
+        criarArquivo(insertionSortTicker(inverterVetorPilha(vetor)), "b3stocks_ticker_insertionSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_ticker_insertionSort_piorCaso.csv\" criado com sucesso.");
         
         System.out.println();
@@ -32,7 +32,7 @@ public class InsertionSort extends Funcoes {
         System.out.println("Arquivo \"b3stocks_volume_insertionSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(insertionSortVolume(inverterVetor(vetor)), "b3stocks_volume_insertionSort_piorCaso.csv");
+        criarArquivo(insertionSortVolume(inverterVetorPilha(vetor)), "b3stocks_volume_insertionSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_volume_insertionSort_piorCaso.csv\" criado com sucesso.");
 
         System.out.println();
@@ -47,7 +47,7 @@ public class InsertionSort extends Funcoes {
         System.out.println("Arquivo \"b3stocks_fluctuations_insertionSort_melhorCaso.csv\" criado com sucesso.");
 
         System.out.println("Pior Caso:");
-        criarArquivo(insertionSortVariacoes(inverterVetor(vetor)), "b3stocks_fluctuations_insertionSort_piorCaso.csv");
+        criarArquivo(insertionSortVariacoes(inverterVetorPilha(vetor)), "b3stocks_fluctuations_insertionSort_piorCaso.csv");
         System.out.println("Arquivo \"b3stocks_fluctuations_insertionSort_piorCaso.csv\" criado com sucesso.");
     }
 

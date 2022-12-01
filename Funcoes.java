@@ -29,10 +29,8 @@ public abstract class Funcoes {
 
         String linha = null;
         Registro objetoRegistro = null;
-        int i = 0;
 
         MeuConjuntoDinamico conjunto = new MeuConjuntoDinamico();
-        //Registro vetorRegistro[] = new Registro[1883203]; //Quantidade de linhas (Desconsiderando a primeira)//
 
         try{
             BufferedReader arq = new BufferedReader(new InputStreamReader(new FileInputStream(caminho)));
@@ -67,62 +65,11 @@ public abstract class Funcoes {
             System.out.println("Arquivo não encontrado!");
         }//Fim do catch
 
-        //Copia o conjunto dinamico para um vetor com tamanho "preenchido"
+        //Copia o conjunto dinamico para um vetor com tamanho "preenchido", sem espaços vazios
         Registro[] vetorRegistro = conjunto.toArray();
-        System.out.println("Tamanho: " + vetorRegistro.length);
 
         return vetorRegistro;
     }//Fim do metodo ConstruirVetorRegistro
-
-    public static Registro[] construirVetorMenor(String caminho){
-        Date dataLinha = null;
-        String tickerLinha;
-        float openLinha;
-        float closeLinha;
-        float highLinha;
-        float lowLinha;
-        float volumeLinha;
-        String registroLinha;
-
-        String linha = null;
-        int i = 0;
-
-        Registro vetorRegistro[] = new Registro[10000]; //Quantidade de linhas (Desconsiderando a primeira)//
-
-        try{
-            BufferedReader arq = new BufferedReader(new InputStreamReader(new FileInputStream(caminho)));
-
-            arq.readLine(); //Desconsidera a primeira linha;
-
-            while((linha = arq.readLine()) != null) {
-                
-                String arrayDados[] = separarDados(linha);
-
-                try{
-                    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-                    dataLinha = formatter.parse(arrayDados[0]); 
-                }catch(ParseException e){
-                    e.printStackTrace();
-                }
-                
-                tickerLinha = arrayDados[1];
-                openLinha = Float.parseFloat(arrayDados[2]);
-                closeLinha = Float.parseFloat(arrayDados[3]);
-                highLinha = Float.parseFloat(arrayDados[4]);
-                lowLinha = Float.parseFloat(arrayDados[5]);
-                volumeLinha = Float.parseFloat(arrayDados[6]);
-                registroLinha = linha;
-                vetorRegistro[i] = new Registro(dataLinha, tickerLinha, openLinha, closeLinha, highLinha, lowLinha, volumeLinha, registroLinha);
-
-                i++;
-            }//Fim do while
-            arq.close();
-        }catch(IOException ex){
-            System.out.println("Arquivo não encontrado!");
-        }//Fim do catch
-
-        return vetorRegistro;
-    }//Fim do metodo ConstruirVetorMenor
 
     public Registro[] inverterVetor(Registro[] vetor){
         int j = 0;
@@ -131,6 +78,20 @@ public abstract class Funcoes {
         for(int i = vetor.length - 1; i >= 0; i--){
             A[j] = vetor[i];
             j++;
+        }
+        return A;
+    }
+
+    public static Registro[] inverterVetorPilha(Registro[] vetor) throws PilhaCheiaException, PilhaVaziaException{
+        Registro[] A = new Registro[vetor.length];
+
+        MinhaPilha pilha = new MinhaPilha(1883203);
+
+        for(int i = 0; i < vetor.length; i++){
+            pilha.empilhar(vetor[i]);
+        }
+        for(int i = 0; i < vetor.length; i++){
+            A[i] = pilha.desempilhar();
         }
         return A;
     }

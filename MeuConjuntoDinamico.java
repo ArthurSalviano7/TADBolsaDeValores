@@ -127,7 +127,12 @@ public class MeuConjuntoDinamico implements ConjuntoDinamicoIF<Registro>{
 			j++;
 		}
 		Registro[] novoArray = new Registro[j];
-		novoArray = meusDados;
+		j = 0;
+		while(meusDados[j] != null){
+			novoArray[j] = meusDados[j];
+			j++;
+		}
+		
 		return novoArray;
 	}
 
