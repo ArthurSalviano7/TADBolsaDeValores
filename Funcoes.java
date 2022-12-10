@@ -80,8 +80,10 @@ public abstract class Funcoes {
         for(int i = 0; i < vetor.length; i++){
             pilha.empilhar(vetor[i]);
         }
-        for(int i = 0; i < vetor.length; i++){
+        int i = 0;
+        while(!pilha.isEmpty()){
             A[i] = pilha.desempilhar();
+            i++;
         }
         return A;
     }

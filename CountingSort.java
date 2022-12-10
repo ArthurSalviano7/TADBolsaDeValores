@@ -3,7 +3,6 @@ public class CountingSort extends Funcoes{
     
     public void gerarcountingSort(Registro[] baseDeDados){
 
-        Registro[] vetor = baseDeDados.clone();
 
         System.out.println();
         System.out.println("________________________COUNTING SORT________________________");

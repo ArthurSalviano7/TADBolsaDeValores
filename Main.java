@@ -36,12 +36,14 @@ public class Main extends Funcoes {
 
         SelectionSort objSelectionSort = new SelectionSort();
         objSelectionSort.gerarSelectionSort(baseDeDados);
-
+        
+        QuickSortMedianaDe3 objQuickSortMedianaDe3 = new QuickSortMedianaDe3();
+        objQuickSortMedianaDe3.gerarQuickSortMed3(baseDeDados);
+        
         QuickSort objQuickSort = new QuickSort();
         objQuickSort.gerarQuickSort(baseDeDados);
 
-        QuickSortMedianaDe3 objQuickSortMedianaDe3 = new QuickSortMedianaDe3();
-        objQuickSortMedianaDe3.gerarQuickSortMed3(baseDeDados);
+        
 
     }//Fim do main
 }
